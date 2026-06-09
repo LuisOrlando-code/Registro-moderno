@@ -63,3 +63,7 @@ No requiere instalación ni dependencias adicionales.
 
 ## 🌐 Pagina
 https://registro-moderno.vercel.app/
+
+## 📸 Capturas de pantalla
+
+![Vista previa](./imagen/preview.png)
