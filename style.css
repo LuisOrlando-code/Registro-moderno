@@ -1,38 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     height: 100%;
 }
 
-body{
+body {
     height: 100%;
     display: grid;
     place-items: center;
     margin: 0;
     padding: 0 32px;
     background: #f5f5f5;
-    font-family: "ubuntu";
-    animation: rotate 6s infinite alternate linear;
+    font-family: "Ubuntu", sans-serif;
+    animation: rotar 6s infinite alternate linear;
 }
 
-.circle{
+.circulo {
     position: fixed;
     top: -50vmin;
     left: -50vmin;
     width: 100vmin;
     height: 100vmin;
-    border-radius: 47% 53% 61% 39% / 46% 51% 40% 55%;
+    border-radius: 47% 53% 61% 39% / 46% 51% 49% 55%;
     background: #65c8ff;
-
 }
 
-.circle::after{
+.circulo::after {
     content: "";
-    position: inherit;
+    position: absolute;
     right: -50vmin;
     bottom: -55vmin;
     width: inherit;
@@ -41,7 +40,7 @@ body{
     background: #143d81;
 }
 
-.card{
+.tarjeta {
     overflow: hidden;
     position: relative;
     z-index: 3;
@@ -52,11 +51,9 @@ body{
     background: #fff;
     text-align: center;
     box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
-
 }
 
-
-.card::before{
+.tarjeta::before {
     content: "";
     position: absolute;
     background: #216ce7;
@@ -68,7 +65,7 @@ body{
     translate: -50% 0;
 }
 
-.card .logo{
+.tarjeta .logo {
     position: absolute;
     display: flex;
     align-items: center;
@@ -79,57 +76,54 @@ body{
     width: 64px;
     top: 30px;
     left: 50%;
-    translate: .50% 0;
+    translate: -50% 0;
 }
 
-.card .logo i {
-    font-size: 5opx;
-    color: #316ce7;
-    font-width: 500;
+.tarjeta .logo i {
+    font-size: 50px;
+    color: #216ce7;
+    font-weight: 500;
 }
 
-.card>h2{
+.tarjeta > h2 {
     font-size: 22px;
     font-weight: 400;
     margin: 0 0 30px;
     color: #2a3444;
-
 }
 
-.form{
+.formulario {
     margin: 0 0 30px;
     display: grid;
     gap: 10px;
 }
 
-.form>input, .logo>button{
+.formulario > input, .formulario > button {
     width: 100%;
     height: 50px;
     border-radius: 28px;
 }
 
-.form>input{
+.formulario > input {
     border: 2px solid #e0c0e0;
     font-family: inherit;
     font-size: 16px;
     padding: 0 24px;
     color: #11274c;
     transition: all 0.375s;
+    outline: none;
 }
 
-.form>input:hover{
+.formulario > input:hover {
     border: 2px solid #999;
-
 }
 
-.form>input::placeholder{
+.formulario > input::placeholder {
     color: #cac8c8;
 }
 
-.form>button{
+.formulario > button {
     cursor: pointer;
-    width: 100%;
-    height: 50px;
     padding: 0 16px;
     background: #216ce7;
     color: #f9f9f9;
@@ -142,30 +136,35 @@ body{
     transition: all 0.375s;
 }
 
-.form>button:hover{
+.formulario > button:hover {
     color: #fff;
     background: #143d81;
 }
 
-.card>footer{
+.tarjeta > footer {
     color: #7c7c7c;
 }
 
-.card>footer>a{
+.tarjeta > footer > a {
     color: #216ce7;
     transition: all 0.375s;
 }
 
-.card>footer>a:hover{
-    color: #133d81;
+.tarjeta > footer > a:hover {
+    color: #143d81;
 }
 
-@media (width >= 500px){
-    body{
-        padding: 0%;
+@keyframes rotar {
+    from { filter: hue-rotate(0deg); }
+    to   { filter: hue-rotate(30deg); }
+}
+
+@media (width >= 500px) {
+    body {
+        padding: 0;
     }
-    .card{
-        margin: 0%;
+    .tarjeta {
+        margin: 0;
         width: 360px;
     }
-} 
+}
