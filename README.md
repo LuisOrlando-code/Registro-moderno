@@ -66,4 +66,4 @@ https://registro-moderno.vercel.app/
 
 ## 📸 Capturas de pantalla
 
-![Vista previa](./imagen/preview.png)
+![Vista previa](./imagen/imagen.png)
